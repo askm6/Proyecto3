@@ -1,0 +1,50 @@
+# Configuración global del Proyecto 3 · Viabilidad de CPD
+
+semilla: 42
+
+generacion:
+  # Escala sobre el nº real de municipios por provincia (1.0 ≈ 8.100 municipios)
+  escala_municipios: 1.0
+  anio_inicio: 2015
+  anio_fin: 2024
+
+rutas:
+  raw: data/raw
+  processed: data/processed
+  warehouse: data/cpd.duckdb
+  modelos: data/modelos
+
+# Pesos de cada dimensión en el score global de viabilidad (suman 1)
+pesos_score:
+  energia: 0.25
+  agua: 0.15
+  clima: 0.15
+  telecomunicaciones: 0.15
+  suelo_y_riesgos: 0.10
+  transporte: 0.05
+  socioeconomico: 0.10
+  regulatorio_ambiental: 0.05
+
+# CPD de referencia para el simulador (valores por defecto)
+cpd_referencia:
+  superficie_m2: 20000
+  salas_tecnicas: 8
+  racks: 2000
+  servidores: 40000
+  potencia_ti_mw: 30
+  almacenamiento_pb: 200
+  capacidad_tflops: 500000
+  tier: 3
+  pue: 1.35
+  renovable_requerida_pct: 70
+  fv_propia_mw: 5
+  eolica_propia_mw: 0
+  refrigeracion: evaporativa   # aire | evaporativa | adiabatica | inmersion
+  wue_l_kwh: 1.2
+  trafico_medio_gbps: 400
+  trafico_pico_gbps: 1200
+  operadores_requeridos: 3
+  latencia_max_ms: 10
+  inversion_inicial_meur: 450
+  vida_util_anios: 20
+  personal: 120

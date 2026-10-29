@@ -1,0 +1,15 @@
+numpy>=1.26
+pandas>=2.1
+pyarrow>=15.0
+openpyxl>=3.1
+pyyaml>=6.0
+duckdb>=1.0
+scikit-learn>=1.4
+xgboost>=2.0
+statsmodels>=0.14
+prophet>=1.1
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+streamlit>=1.35
+pytest>=8.0
